@@ -1,0 +1,18 @@
+[
+    {
+        "background": "../img/wallhaven-rrrw9m_1920x1200.png",
+        "clockShadowOpacity": ".1",
+        "clockLocate": [
+            "51%",
+            "50.75%"
+        ]
+    },
+    {
+        "background": "../img/limestart.jpg",
+        "clockShadowOpacity": ".2",
+        "clockLocate": [
+            "8%",
+            "50%"
+        ]
+    }
+]

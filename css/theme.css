@@ -1,0 +1,101 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+/* 清除滚轮 */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+:root {
+  --background-image: none;
+  --clock-top: 0;
+  --clock-left: 0;
+  --clock-shadow-color-opacity: .1;
+  --clock-shadow-color-opacity-withoutHover: calc(var(--clock-shadow-color-opacity) - .1);
+}
+
+.bar {
+  height: 80%;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-radius: 20px;
+  position: absolute;
+  top: 10%;
+  left: 20px;
+  transition: all 0.5s linear;
+  overflow-y: scroll;
+  opacity: 0;
+}
+.bar:hover {
+  opacity: 1;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+}
+input:checked {
+  border: 2px solid lightblue;
+  box-shadow: 0 0 5px 1px lightblue;
+}
+
+.themeImg {
+  height: 99px;
+  width: 176px;
+  margin: 11px auto;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s linear;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.themeImg:hover {
+  border: 2px solid rgba(255, 192, 203, 0.8);
+  box-shadow: 0 0 5px 1px rgba(255, 192, 203, 0.3);
+}
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -10;
+  position: fixed;
+  transition: all linear 0.5s;
+}
+
+.clock {
+  left: var(--clock-left);
+  top: var(--clock-top);
+  padding: 0 18px 10px;
+  border-radius: 25px;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  background: rgba(255, 192, 203, var(--clock-shadow-color-opacity-withoutHover));
+  box-shadow: 0 0 15px 1px rgba(255, 192, 203, var(--clock-shadow-color-opacity-withoutHover));
+}
+.clock:hover {
+  background: rgba(255, 192, 203, var(--clock-shadow-color-opacity));
+  box-shadow: 0 0 5px 1px rgba(255, 192, 203, var(--clock-shadow-color-opacity));
+}
+
+.taskbar {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.6));
+  position: absolute;
+  bottom: 0;
+}/*# sourceMappingURL=theme.css.map */
